@@ -1,8 +1,11 @@
-import Image from "next/image";
 import Hero from "./pages/Hero";
+import Pricing from "./pages/Pricing";
 
 export default function Home() {
   return (
-    <Hero />
+    <>
+      <Hero />
+      <Pricing />
+    </>
   );
 }

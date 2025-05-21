@@ -2,45 +2,61 @@ import Image from 'next/image';
 import React from 'react';
 import heroImg from '../../../public/heroImg.jpg';
 import { Button } from '@/ui/shadcn/button';
-import { Link, LockIcon, Scale, Scaling } from 'lucide-react';
+import { Calendar, PenTool, Gift } from 'lucide-react';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <div className="border-b">
-        <div className="max-w-7xl mx-auto flex items-center justify-between py-10 gap-10">
-            {/* Left Content */}
-            <div className="w-1/2">
-                <h1 className="text-4xl font-bold text-primary-500">Welcome to pIHHs</h1>
-                <p className="mt-4 text-lg text-primary-100">
-                    Your one-stop solution for all your needs.
-                </p>
-                <Button className="mt-6 text-white rounded-full text-base outline-none border-none bg-secondary-100 border px-[25px] py-2 transition-all hover:bg-primary-100 active:border-primary-200 active:bg-primary-200">
-                    Get Started
+        <div className="border-b bg-white">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between py-14 px-6 gap-10">
+            {/* Text Left */}
+            <div className="w-full md:w-1/2">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-[#5f687b] leading-tight">
+                Beautiful Handwriting Starts Here 🖋️
+            </h1>
+            <p className="mt-4 text-base md:text-lg text-[#5f687b] max-w-xl">
+                Enroll in our 10-day course designed for school students and early learners! 
+                Master calligraphy, cursive & mono cursive from scratch — 7 days of teaching, 2 days of evaluation, and a grand competition on Day 10!
+            </p>
+            <p className="mt-2 text-[#060606] font-semibold text-lg">
+                Just रू799 – Get started today and win gift hampers or full cashback!
+            </p>
+
+            <Link href="/pricing">
+                <Button className="mt-6 text-white rounded-full text-base bg-[#10bc69] px-6 py-3 hover:bg-[#009961] transition-all">
+                Enroll Now
                 </Button>
-                <div className="iconWithInfo mt-6 flex">
-                    <div className='flex items-center gap-2 w-40 py-2 justify-between gap-x-4'>
-                        <LockIcon size={30} />
-                        <span className='text-primary-100 text-sm font-medium'>Speed and Security</span>
-                    </div>
-                    <div className='flex items-center gap-2 w-40 py-2 justify-between gap-x-4'>
-                        <Scaling size={30} />
-                        <span className='text-primary-100 text-sm font-medium'>Flexibility & Scalability</span>
-                    </div>
-                    <div className='flex items-center gap-2 w-40 py-2 justify-between gap-x-4'>
-                        <Link size={30} />
-                        <span className='text-primary-100 text-sm font-medium'>Better Collaboration</span>
-                    </div>
+            </Link>
+
+            {/* Perks */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-center gap-3">
+                <PenTool size={28} className="text-[#10bc69]" />
+                <span className="text-[#5f687b] text-sm font-medium">Learn Calligraphy & Cursive</span>
                 </div>
+                <div className="flex items-center gap-3">
+                <Calendar size={28} className="text-[#10bc69]" />
+                <span className="text-[#5f687b] text-sm font-medium">10-Day Fun Program</span>
+                </div>
+                <div className="flex items-center gap-3">
+                <Gift size={28} className="text-[#10bc69]" />
+                <span className="text-[#5f687b] text-sm font-medium">Cashback & Gift Hampers</span>
+                </div>
+                <div className="flex items-center gap-3">
+                <PenTool size={28} className="text-[#10bc69]" />
+                <span className="text-[#5f687b] text-sm font-medium">Boost Confidence & Creativity</span>
+                </div>
+            </div>
             </div>
 
             {/* Right Image */}
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
             <Image
                 src={heroImg}
-                alt="billboard"
+                alt="Handwriting Course"
                 width={600}
                 height={400}
-                className="rounded-lg object-cover w-full h-auto"
+                className="rounded-xl object-cover w-full h-auto shadow-md"
             />
             </div>
         </div>
