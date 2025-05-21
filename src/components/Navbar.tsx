@@ -1,3 +1,4 @@
+import { Button } from '@/ui/shadcn/button';
 import Link from 'next/link';
 import React from 'react';
 
@@ -32,9 +33,9 @@ const Navbar = () => {
                         Contact
                     </Link>
                     <Link href={'/register'}>
-                        <button className="text-white rounded-full text-base outline-none border-none bg-secondary-100 border px-[25px] py-2 transition-all  hover:bg-primary-100 active:border-primary-200 active:bg-primary-200">
+                        <Button className="text-white rounded-full text-base outline-none border-none bg-secondary-100 border px-[25px] py-2 transition-all  hover:bg-primary-100 active:border-primary-200 active:bg-primary-200">
                             Get Started
-                        </button>
+                        </Button>
                     </Link>
                 </div>
             </div>
