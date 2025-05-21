@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "daisyui";
 
 
 
@@ -17,7 +18,8 @@ body {
 @theme {
   --color-primary-100: #5f687b;
   --color-secondary-100: #10bc69;
-  --color-bermuda: #78dcca;
+  --color-secondary-200: #009961;
+  --color-tertiary-100: #060606;
 }
 
 @custom-variant dark (&:is(.dark *));
